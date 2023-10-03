@@ -1,0 +1,297 @@
+@charset "utf-8";
+
+/* common */
+
+:root {
+	--max-width: 720px;
+	--theme-color: #09c;
+}
+
+html {
+	font-size: 14px;
+}
+
+body {
+	margin: 0;
+}
+
+a {
+	color: var(--theme-color);
+	text-decoration: none;
+}
+
+/* layout */
+
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100svh;
+	line-height: 2;
+}
+
+.header {
+	background-color: var(--theme-color);
+	color: #fff;
+}
+
+.header-container {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.main {
+	flex: auto;
+	background-color: #f8f8f8;
+	color: #333;
+}
+
+.main-container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.footer {
+	background-color: #333;
+	color: #ccc;
+	text-align: center;
+}
+
+.footer-container {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+/* title */
+
+.title {
+	flex: auto;
+	margin: 1rem 0;
+	font-size: 1.5rem;
+}
+
+.title-link {
+	color: inherit;
+}
+
+/* search */
+
+.search {
+	display: flex;
+	margin: 0;
+}
+
+.search-textbox {
+	width: 6rem;
+	padding: .5rem 1rem;
+	border: 0;
+	border-radius: 1rem 0 0 1rem;
+	background-color: #fff;
+	color: #333;
+	font-family: inherit;
+	font-size: smaller;
+}
+
+.search-button {
+	padding: .5rem 1rem;
+	border: 0;
+	border-radius: 0 1rem 1rem 0;
+	background-color: #fff;
+	color: var(--theme-color);
+	font-size: smaller;
+	cursor: pointer;
+}
+
+/* menu */
+
+.menu {
+	display: flex;
+	gap: 1rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.menu-link {
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+	background: #fff;
+	color: var(--theme-color);
+	font-size: smaller;
+}
+
+/* heading */
+
+.heading {
+	margin: 1rem 0;
+	font-size: 1.4rem;
+}
+
+/* post */
+
+.post {
+	margin: 1rem 0;
+	background-color: #fff;
+}
+
+.post-title {
+	padding: .5rem 1rem;
+	background-color: var(--theme-color);
+	color: #fff;
+	font-size: 1rem;
+	font-weight: normal;;
+}
+
+.post-title-link {
+	color: inherit;
+}
+
+.post-main {
+	margin: 1rem;
+	font: inherit;
+	white-space: pre-wrap;
+}
+
+.post-info {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1rem;
+	padding: .5rem 1rem;
+	background-color: #f0f0f0;
+	color: #999;
+}
+
+.post-times {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 1rem;
+}
+
+.post-links {
+	display: flex;
+	flex: none;
+	flex-wrap: wrap;
+	gap: 0 1rem;
+}
+
+.post-link {
+	display: block;
+	color: inherit;
+}
+
+/* pager */
+
+.pager {
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
+	margin: 1rem 0;
+}
+
+.pager-link {
+	display: block;
+	background-color: var(--theme-color);
+	color: #fff;
+	padding: .5rem 1rem;
+}
+
+.pager-now {
+	display: block;
+	background-color: #f0f0f0;
+	color: #999;
+	padding: .5rem 1rem;
+}
+
+/* form */
+
+.form {
+	margin: 1rem 0;
+}
+
+.form-item {
+	margin: 1rem 0;
+}
+
+.form-buttons {
+	text-align: right;
+}
+
+.form-label {
+	display: block;
+}
+
+.form-textbox {
+	width: 100%;
+	padding: .5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: #fff;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+.form-textbox:read-only {
+	background-color: #f0f0f0;
+}
+
+.form-textarea {
+	resize: vertical;
+	width: 100%;
+	min-height: 10rem;
+	padding: .5rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	background-color: #fff;
+	font-family: inherit;
+	vertical-align: middle;
+}
+
+.form-textarea:read-only {
+	background-color: #f0f0f0;
+}
+
+.form-button {
+	padding: .5rem 1rem;
+	border: 0;
+	border-radius: 4px;
+	background-color: var(--theme-color);
+	color: #fff;
+	font-family: inherit;
+	font-size: smaller;
+	cursor: pointer;
+}
+
+.form-success {
+	margin: 1rem 0;
+	padding: .5rem 1rem;
+	border: 1px solid #9c9;
+	border-radius: 4px;
+	background-color: #cfc;
+	color: #696;
+	font-size: smaller;
+}
+
+.form-error {
+	margin: 1rem 0;
+	padding: .5rem 1rem;
+	border: 1px solid #cc9;
+	border-radius: 4px;
+	background-color: #ffc;
+	color: #996;
+	font-size: smaller;
+}
+
+/* copyright */
+
+.copyright-link {
+	color: inherit;
+}
